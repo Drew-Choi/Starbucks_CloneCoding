@@ -103,7 +103,7 @@ header .inner .sub-menus .search {
   position: relative;
 }
 
-header .inner .sub-menus .search > input {
+header .inner .sub-menus .search > input.search-extend {
   width: 36px;
   height: 34px;
   padding: 4px 10px;
@@ -111,20 +111,41 @@ header .inner .sub-menus .search > input {
   box-sizing: border-box;
   border-radius: 5px;
   outline: none;
-  transition: width 0.4s;
+  transition: width 1s;
+  transition-timing-function: ease;
 }
 
-header .inner .sub-menus .search > input:focus {
+header .inner .sub-menus .search > input.search-extend.on{
   width: 190px;
+  height: 34px;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  transition: width 1s;
+  transition-timing-function: ease;
+  padding: 0 10px;
+}
+
+header .inner .sub-menus .search > input.search-extend.on:focus {
+
 }
 
 header .inner .sub-menus .search > .material-symbols-outlined {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
   position: absolute;
   right: 6px;
   top: 0;
   bottom: 0;
-  height: 28px;
+  height: 30px;
   margin: auto;
+}
+
+header .inner .sub-menus .search > .material-symbols-outlined {
+ 
   font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48;
 }
 
