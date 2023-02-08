@@ -14,7 +14,7 @@ body {
   font-weight: 400;
   line-height: 1.4;
   font-family: 'Nanum Gothic', sans-serif;
-  height: 3000px;
+  /* height: 3000px; */
 }
 
 a {
@@ -96,6 +96,19 @@ header > .inner {
 .btn--white:hover {
   background-color: #fff;
   color: black;
+  text-decoration: underline;
+}
+
+.btn--black {
+  border-color: #000;
+  color: #000;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.btn--black:hover { 
+  background-color: #000; 
+  color: white; 
   text-decoration: underline;
 }
 
@@ -604,6 +617,17 @@ header .badges .badge > img {
   left: 190px;
 }
 
+.elsalvador .inner img.elsalvador__item.on {
+  position: absolute;
+  width: 30%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 190px;
+  opacity: 1;
+  transform: translateX(0);
+}
+
 
 
 .elsalvador .inner div.elsalvador__content {
@@ -618,8 +642,13 @@ header .badges .badge > img {
   left: 640px;
 }
 
-.elsalvador:active .inner img.elsalvador__item,
-.elsalvador:active .inner div.elsalvador__content {
+.elsalvador .inner div.elsalvador__content.on {
+  position: absolute;
+  height: 300px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 640px;
   opacity: 1;
   transform: translateX(0);
 }
@@ -680,6 +709,7 @@ header .badges .badge > img {
 .ethiopia .inner {
   position: relative;
   height: 100%;
+  overflow: hidden;
 }
 
 .ethiopia .inner .ethiopia__item {
@@ -742,7 +772,7 @@ header .badges .badge > img {
   height: 400px;
   width: 362px;
   top: 0;
-  bottom: 160px;
+  bottom: 120px;
   margin: auto;
   left: 140px;
 }
@@ -750,17 +780,30 @@ header .badges .badge > img {
 .favorite .inner .fav__texts .fav__title {
   width: 70%;
   margin-bottom: 40px;
+  transform: translateX(-700px);
+  opacity: 0;
+  transition: 2s;
 }
 
 .favorite .inner .fav__texts .fav__desctipt {
   width: 70%;
   margin-bottom: 40px;
+  transform: translateX(-700px);
+  opacity: 0;
+  transition: 2.5s;
 }
 
 .favorite .inner .fav__texts .btn.btn--white {
   position: absolute;
   right: 110px;
 }
+
+.favorite:active .inner .fav__texts .fav__title, 
+.favorite:active .inner .fav__texts .fav__desctipt {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 
 .favorite .inner .fav__mainimage {
   position: absolute;
@@ -769,4 +812,146 @@ header .badges .badge > img {
   top: 0;
   bottom: 100px;
   margin: auto;
+}
+
+/* MAGAZINE */
+.magazine {
+  position: relative;
+  height: 400px;
+  background-image: url("../images/magazine_bg.png");
+  background-repeat: no-repeat;
+  background-position: -270px 50px;
+  /* background-color: wheat; */
+}
+
+.magazine .inner {
+  position: relative;
+  height: 100%;
+}
+
+.magazine .inner .maga__texts {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 600px;
+  height: 100px;
+  top: 0;
+  bottom: 50px;
+  margin: auto;
+  left: 50px;
+}
+
+.magazine .inner .maga__texts .maga__title {
+  
+}
+
+.magazine .inner .maga__texts .btn.btn--black {
+  margin-top: 40px;
+}
+
+.magazine .inner .maga__mainimage {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  opacity: 0;
+  transition: 1.5s;
+}
+
+.magazine:active .inner .maga__mainimage {
+  opacity: 1;
+}
+
+/* STORE */
+.store {
+  position: relative;
+  height: 400px;
+  background-image: url("../images/store_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.store .inner {
+  position: relative;
+  height: 100%;
+}
+
+.store .inner .store__text1 {
+  position: absolute;
+  width: 385px;
+  top: 100px;
+  right: 50px;
+  transition: 2s;
+  transform: translateX(800px);
+}
+
+.store .inner .store__text2 {
+  position: absolute;
+  width: 366px;
+  top: 170px;
+  right: 69px;
+  transition: 2.5s;
+  transform: translateX(800px);
+}
+
+.store .inner .store__image1 {
+  position: absolute;
+  width: 366px;
+  top: 0px;
+  left: 70px;
+  transition: 1.5s;
+  opacity: 0;
+}
+
+.store .inner .store__image2 {
+  position: absolute;
+  width: 228px;
+  top: 150px;
+  left: 300px;
+  transition: 1.5s;
+  opacity: 0;
+}
+
+.store .inner .store__image3 {
+  position: absolute;
+  width: 348px;
+  top: -60px;
+  left: 430px;
+  transition: 1.5s;
+  opacity: 0;
+}
+
+.store .inner .store__image4 {
+  position: absolute;
+  width: 230px;
+  right: -70px;
+  bottom: 0;
+  transition: 1.5s;
+  opacity: 0;
+}
+
+.store .inner .btn.btn--black {
+  position: absolute;
+  top: 290px;
+  right: 330px;
+  transform: translateX(800px);
+}
+
+.store:active .inner .store__image1,
+.store:active .inner .store__image2,
+.store:active .inner .store__image3,
+.store:active .inner .store__image4 {
+  opacity: 1;
+}
+
+.store:active .inner .store__text1,
+.store:active .inner .store__text2 {
+  transform: translateX(0);
+}
+
+.store:active .inner .btn.btn--black  {
+  transform: translateX(0);
+  transition: transform 3s, background-corol 0.6s, color 0.6s, text-decoration 0.6s;
 }
