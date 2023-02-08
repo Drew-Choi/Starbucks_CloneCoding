@@ -614,6 +614,7 @@ header .badges .badge > img {
   transform: translateX(-700px);
   opacity: 0;
   transition: 2.5s;
+  transition-timing-function: ease;
   left: 190px;
 }
 
@@ -628,8 +629,6 @@ header .badges .badge > img {
   transform: translateX(0);
 }
 
-
-
 .elsalvador .inner div.elsalvador__content {
   position: absolute;
   height: 300px;
@@ -639,6 +638,7 @@ header .badges .badge > img {
   transform: translateX(900px);
   opacity: 0;
   transition: 2.5s;
+  transition-timing-function: ease;
   left: 640px;
 }
 
@@ -682,6 +682,20 @@ header .badges .badge > img {
   background-repeat: no-repeat;
   left: -50px;
   opacity: 0;
+  transition: 1.5s;
+}
+
+.ethiopia.on::before {
+  content: "";
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  bottom: 0;
+  background-image: url("../images/ethiopia_before.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  left: -50px;
+  opacity: 1;
 }
 
 .ethiopia::after {
@@ -695,12 +709,19 @@ header .badges .badge > img {
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0;
+  transition: 1.5s;
 }
 
-
-.ethiopia:active::before,
-.ethiopia:active::after {
-  transition: 1.5s;
+.ethiopia.on::after {
+  content: "";
+  position: absolute;
+  height: 400px;
+  width: 300px;
+  bottom: 0;
+  right: 0;
+  background-image: url("../images/ethiopia_after.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   opacity: 1;
 }
 
@@ -721,11 +742,18 @@ header .badges .badge > img {
   margin: auto;
   z-index: 1;
   opacity: 0;
-}
-
-.ethiopia:active .inner .ethiopia__item {
   transition: 1.5s;
   transition-delay: 0.8s;
+}
+
+.ethiopia .inner .ethiopia__item.on {
+  position: absolute;
+  height: 400px;
+  left: -480px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 1;
   opacity: 1;
 }
 
@@ -785,7 +813,7 @@ header .badges .badge > img {
   transition: 2s;
 }
 
-.favorite .inner .fav__texts .fav__desctipt {
+.favorite .inner .fav__texts .fav__descript {
   width: 70%;
   margin-bottom: 40px;
   transform: translateX(-700px);
@@ -798,8 +826,16 @@ header .badges .badge > img {
   right: 110px;
 }
 
-.favorite:active .inner .fav__texts .fav__title, 
-.favorite:active .inner .fav__texts .fav__desctipt {
+.favorite .inner .fav__texts .fav__title.on {
+  width: 70%;
+  margin-bottom: 40px;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.favorite .inner .fav__texts .fav__descript.on {
+  width: 70%;
+  margin-bottom: 40px;
   transform: translateX(0);
   opacity: 1;
 }
@@ -858,7 +894,10 @@ header .badges .badge > img {
   transition: 1.5s;
 }
 
-.magazine:active .inner .maga__mainimage {
+.magazine .inner .maga__mainimage.on {
+  position: absolute;
+  top: 0;
+  right: 50px;
   opacity: 1;
 }
 
@@ -883,8 +922,9 @@ header .badges .badge > img {
   width: 385px;
   top: 100px;
   right: 50px;
-  transition: 2s;
+  transition: 1s;
   transform: translateX(800px);
+  transition-timing-function: ease;
 }
 
 .store .inner .store__text2 {
@@ -892,8 +932,9 @@ header .badges .badge > img {
   width: 366px;
   top: 170px;
   right: 69px;
-  transition: 2.5s;
+  transition: 1.5s;
   transform: translateX(800px);
+  transition-timing-function: ease;
 }
 
 .store .inner .store__image1 {
@@ -903,6 +944,7 @@ header .badges .badge > img {
   left: 70px;
   transition: 1.5s;
   opacity: 0;
+  transition-timing-function: ease;
 }
 
 .store .inner .store__image2 {
@@ -912,6 +954,7 @@ header .badges .badge > img {
   left: 300px;
   transition: 1.5s;
   opacity: 0;
+  transition-timing-function: ease;
 }
 
 .store .inner .store__image3 {
@@ -921,6 +964,7 @@ header .badges .badge > img {
   left: 430px;
   transition: 1.5s;
   opacity: 0;
+  transition-timing-function: ease;
 }
 
 .store .inner .store__image4 {
@@ -930,6 +974,7 @@ header .badges .badge > img {
   bottom: 0;
   transition: 1.5s;
   opacity: 0;
+  transition-timing-function: ease;
 }
 
 .store .inner .btn.btn--black {
@@ -937,21 +982,62 @@ header .badges .badge > img {
   top: 290px;
   right: 330px;
   transform: translateX(800px);
+  transition-timing-function: ease;
 }
 
-.store:active .inner .store__image1,
-.store:active .inner .store__image2,
-.store:active .inner .store__image3,
-.store:active .inner .store__image4 {
+.store .inner .store__image1.on {
+  position: absolute;
+  width: 366px;
+  top: 0px;
+  left: 70px;
   opacity: 1;
 }
 
-.store:active .inner .store__text1,
-.store:active .inner .store__text2 {
+.store .inner .store__image2.on {
+  position: absolute;
+  width: 228px;
+  top: 150px;
+  left: 300px;
+  opacity: 1;
+}
+
+
+.store .inner .store__image3.on {
+  position: absolute;
+  width: 348px;
+  top: -60px;
+  left: 430px;
+  opacity: 1;
+}
+
+
+.store .inner .store__image4.on {
+  position: absolute;
+  width: 230px;
+  right: -70px;
+  bottom: 0;
+  opacity: 1;
+}
+
+.store .inner .store__text1.on {
+  position: absolute;
+  width: 385px;
+  top: 100px;
+  right: 50px;
   transform: translateX(0);
 }
 
-.store:active .inner .btn.btn--black  {
+.store .inner .store__text2.on {
+  position: absolute;
+  width: 366px;
+  top: 170px;
+  right: 69px;
   transform: translateX(0);
-  transition: transform 3s, background-corol 0.6s, color 0.6s, text-decoration 0.6s;
 }
+
+.store .inner .btn.btn--black.on {
+  position: absolute;
+  top: 290px;
+  right: 330px;
+  transform: translateX(0);
+  transition: transform 2s, background-corol 0.8s, color 0.8s, text-decoration 0.8s;
