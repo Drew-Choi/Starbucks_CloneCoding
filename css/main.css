@@ -87,6 +87,18 @@ header > .inner {
   text-decoration: underline;
 }
 
+.btn--white {
+  border-color: #fff; 
+  color: #fff; 
+  transition: 0.6s; 
+}
+
+.btn--white:hover {
+  background-color: #fff;
+  color: black;
+  text-decoration: underline;
+}
+
 /* HEADER */
 header {
   /* 가이드 */
@@ -97,7 +109,7 @@ header {
   background-color: #f6f5ef;
   border-top: 2px solid black;
   border-bottom: 1px solid #eae7e2;
-  z-index: 1;
+  z-index: 999;
 }
 
 header .inner .logo {
@@ -557,7 +569,8 @@ header .badges .badge > img {
 
 .rewards .inner .rewards__items .rewards__items__card .buttons .btn--login {
   display: inline-block;
-  font-size: 10px;
+  font-size: 14px;
+  padding: 10px 30px;
 }
 
 
@@ -623,7 +636,7 @@ header .badges .badge > img {
 /* 에티오피아 */
 .ethiopia {
   position: relative;
-  height: 300px;
+  height: 400px;
   background-image: url("../images/ethiopia_bg.png");
   background-size: cover;
   background-position: center;
@@ -632,26 +645,37 @@ header .badges .badge > img {
 .ethiopia::before {
   content: "";
   position: absolute;
-  height: 300px;
-  width: 300px;
+  height: 400px;
+  width: 400px;
   bottom: 0;
   background-image: url("../images/ethiopia_before.png");
   background-size: cover;
   background-repeat: no-repeat;
-  left: -40px;
+  left: -50px;
+  opacity: 0;
 }
 
 .ethiopia::after {
   content: "";
   position: absolute;
-  height: 300px;
+  height: 400px;
   width: 300px;
   bottom: 0;
   right: 0;
   background-image: url("../images/ethiopia_after.png");
   background-size: cover;
   background-repeat: no-repeat;
+  opacity: 0;
 }
+
+
+.ethiopia:active::before,
+.ethiopia:active::after {
+  transition: 1.5s;
+  opacity: 1;
+}
+
+
 
 .ethiopia .inner {
   position: relative;
@@ -660,12 +684,19 @@ header .badges .badge > img {
 
 .ethiopia .inner .ethiopia__item {
   position: absolute;
-  height: 300px;
-  left: -200px;
+  height: 400px;
+  left: -480px;
   top: 0;
   bottom: 0;
   margin: auto;
   z-index: 1;
+  opacity: 0;
+}
+
+.ethiopia:active .inner .ethiopia__item {
+  transition: 1.5s;
+  transition-delay: 0.8s;
+  opacity: 1;
 }
 
 .ethiopia .inner div.ethiopia__container {
@@ -676,6 +707,7 @@ header .badges .badge > img {
   bottom: 10px;
   margin: auto;
   left: 210px;
+  z-index: 2;
 }
 
 .ethiopia .inner div.ethiopia__container .ethiopia__contents {
@@ -684,7 +716,57 @@ header .badges .badge > img {
 }
 
 .ethiopia .inner div.ethiopia__container .btn.btn--gold {
-  margin-left: 175px;
+  margin-left: 177px;
   margin-top: 25px;
   font-size: 12px;
+}
+
+/* Favorite */
+
+.favorite {
+  position: relative;
+  height: 800px;
+  background-image: url("../images/fav_bg.png");
+  background-position: bottom;
+  background-size: 120% 95%;
+  background-attachment: fixed;
+}
+
+.favorite .inner {
+  position: relative;
+  height: 100%;
+}
+
+.favorite .inner .fav__texts {
+  position: absolute;
+  height: 400px;
+  width: 362px;
+  top: 0;
+  bottom: 160px;
+  margin: auto;
+  left: 140px;
+}
+
+.favorite .inner .fav__texts .fav__title {
+  width: 70%;
+  margin-bottom: 40px;
+}
+
+.favorite .inner .fav__texts .fav__desctipt {
+  width: 70%;
+  margin-bottom: 40px;
+}
+
+.favorite .inner .fav__texts .btn.btn--white {
+  position: absolute;
+  right: 110px;
+}
+
+.favorite .inner .fav__mainimage {
+  position: absolute;
+  width: 70%;
+  right: -140px;
+  top: 0;
+  bottom: 100px;
+  margin: auto;
 }
