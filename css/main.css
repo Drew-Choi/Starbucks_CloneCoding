@@ -1041,3 +1041,75 @@ header .badges .badge > img {
   right: 330px;
   transform: translateX(0);
   transition: transform 2s, background-corol 0.8s, color 0.8s, text-decoration 0.8s;
+}
+
+/* FOOTER */
+footer {
+  position: relative;
+  background-color: #2c2a29;
+  padding: 32px 0 35px 0;
+}
+
+footer .inner {
+  
+}
+
+/* FOOTER MENU */
+footer .inner .footer__menu {
+  display: flex;
+}
+
+footer .inner .footer__menu .left {
+  width: 90%;
+  /* 가이드 */
+  /* background-color: beige; */
+}
+
+footer .inner .footer__menu .left ul.menu {
+  display: flex;
+}
+
+footer .inner .footer__menu .left ul.menu > li {
+  width: 20%;
+}
+
+footer .inner .footer__menu .left ul.menu > li > ul {
+  vertical-align: baseline;
+}
+
+footer .inner .footer__menu .left ul.menu > li > ul > a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 40px;
+  font-family: arial, HelveticaNeue, DroidSans, Sans-serif, Helvetica;
+}
+
+footer .inner .footer__menu .left ul.menu > li > ul > a:hover {
+  text-decoration: underline;
+}
+
+footer .inner .footer__menu .left ul.menu > li > ul > li {
+  color: #fff;
+  font-size: 12px;
+  line-height: 24px;
+  cursor: pointer;
+  font-family: 'nbg', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
+}
+
+footer .inner .footer__menu .left ul.menu > li > ul > li:hover {
+  text-decoration: underline;
+}
+
+footer .inner .footer__menu .right {
+  position: relative;
+  width: 10%;
+  /* background-color: yellow; */
+}
+
+footer .inner .footer__menu .right > img {
+  position: absolute;
+  left: 0;
+
+}
