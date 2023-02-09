@@ -1110,6 +1110,71 @@ footer .inner .footer__menu .right {
 
 footer .inner .footer__menu .right > img {
   position: absolute;
-  left: 0;
+  right: -50px;
+  /* float: right; */
+}
 
+/* FOOTER_SUB_MENU */
+.footer__sub-menu {
+  position: relative;
+  padding-top: 30px;
+}
+
+.footer__sub-menu > ul.inner {
+  display: flex;
+  justify-content:center
+}
+
+.footer__sub-menu > ul > li {
+  font-size: 12px;
+}
+
+.footer__sub-menu > ul > li > a {
+  text-decoration: none;
+  color: #ccc;
+  padding: 0 10px;
+  font-family: 'nbg', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif, Helvetica;
+}
+
+.footer__sub-menu > ul > li:first-child > a {
+  color: #00B050;
+}
+
+.footer__sub-menu > ul > li > a:hover {
+  text-decoration: underline;
+}
+
+.footer__sub-menu > ul > li.contour {
+  color:#383838 ;
+}
+
+
+/* FOOTER BTN */
+.footer__btn {
+  text-align: center;
+}
+
+.footer__btn .btn.btn--white {
+  margin-right: 5px;
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+.footer__btn .btn.btn--white:hover {
+  background-color: transparent;
+  text-decoration: underline;
+  color: white;
+}
+
+
+/* <!-- FOOTER COPYLIGHT --> */
+.footer__copylight {
+  color: #999;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+.footer__copylight p {
+  line-height: 30px;
 }
