@@ -194,7 +194,7 @@ header .inner .sub-menus .search > input.search-extend {
   transition-timing-function: ease;
 }
 
-header .inner .sub-menus .search > input.search-extend.on{
+header .inner .sub-menus .search > input.search-extend.on {
   width: 190px;
   height: 34px;
   padding: 4px 10px;
@@ -207,7 +207,7 @@ header .inner .sub-menus .search > input.search-extend.on{
   padding: 0 10px;
 }
 
-header .inner .sub-menus .search > input.search-extend.on:focus {
+header .inner .sub-menus .search > input.search-extend:focus {
 
 }
 
