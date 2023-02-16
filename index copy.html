@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Starbucks</title>
+  <title>Starbucks copy</title>
 
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -39,15 +39,16 @@
   <meta property="twitter:image" content="./images/starbucks_seo.jpg" />
   <meta property="twitter:url" content="" />
 
-  <link rel="stylesheet" href="./css/main.css" />
-  
   <!-- swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   
-  <script defer src="./javascript/starbucksJavaS.js"></script>
+  <!-- Main CSS, JS -->
+  <link rel="stylesheet" href="./css/main copy.css" />
+  <script defer src="./javascript/starbucksJavaS copy.js"></script>
  </head>
  <body>
+
   <!-- HEADER -->
   <header>
    <div class="inner">
@@ -63,7 +64,7 @@
         <li><a href="#">Customer Service & Ideas</a></li>
         <li><a href="#">Find a Store</a></li>
       </ul>
-      <div onclick="Toggleclick()" class="search">
+      <div class="search">
         <input type="text" class="search-extend" />
         <span class="material-symbols-outlined">search</span>
       </div>
@@ -424,7 +425,15 @@
       <div class="inner">
         <div class="inner-left">
           <h1>공지사항</h1>
-          <div>탄소 중립 실천 포인트제 실천 안내</div>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">탄소중립실천포인트제 도입 안내</div>
+              <div class="swiper-slide">영상정보처리기기 운영방침 / 위치정보 이용약관 / 개인정보처리방침 이용약관 개정 안내</div>
+              <div class="swiper-slide">시스템 개선 및 서비스 점검 안내</div>
+              <div class="swiper-slide">설 연휴 스타벅스 딜리버리 운영 안내</div>
+              <div class="swiper-slide">스타벅스 카드 온라인 재충전 / e-Gift Card 구매 가능 금액 안내</div>
+            </div>
+          </div>
           <a href="#"><span class="material-symbols-outlined">add_circle</span></a>
         </div>
         <div class="inner-right">
@@ -432,6 +441,27 @@
           <a href="#"><span class="material-symbols-outlined">check_circle</span></a>
         </div>
       </div>
+    </div>
+    <div class="promotion"> 
+      <div class="swiper">
+       <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./images/promotion1.jpg" alt="스타벅스프로모션1">
+          <a href="#" class="btn btn--black">자세히 보기</a>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/promotion2.jpg" alt="스타벅스프로모션2">
+          <a href="#" class="btn btn--black">자세히 보기</a>
+        </div>
+        <div class="swiper-slide">
+          <img src="./images/promotion3.jpg" alt="스타벅스프로모션3">
+          <a href="#" class="btn btn--black">자세히 보기</a>
+        </div>
+       </div> 
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
   </section>
 
@@ -466,6 +496,8 @@
     </div>
   </section>
   
+  
+
   <!-- 엘살바도르 -->
   <section class="elsalvador">
     <div class="inner">

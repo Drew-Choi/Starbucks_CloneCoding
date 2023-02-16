@@ -194,7 +194,7 @@ header .inner .sub-menus .search > input.search-extend {
   transition-timing-function: ease;
 }
 
-header .inner .sub-menus .search > input.search-extend.on {
+header .inner .sub-menus .search > input.search-extend:focus {
   width: 190px;
   height: 34px;
   padding: 4px 10px;
@@ -205,6 +205,10 @@ header .inner .sub-menus .search > input.search-extend.on {
   transition: width 1s;
   transition-timing-function: ease;
   padding: 0 10px;
+}
+
+header .inner .sub-menus .search > input.search-extend:focus {
+
 }
 
 header .inner .sub-menus .search > .material-symbols-outlined {
@@ -438,10 +442,16 @@ header .badges .badge > img {
   font-size: 16px;
 }
 
-.notice .notice-line .inner .inner-left div {
+.notice .notice-line .inner .inner-left .swiper {
   position: absolute;
+  height: 62px;
   left: 80px;
   font-size: 14px;
+}
+
+.notice .notice-line .inner .inner-left .swiper .swiper-wrapper .swiper-slide {
+  height: 62px;
+  line-height: 62px;
 }
 
 .notice .notice-line .inner .inner-left a {
@@ -480,6 +490,77 @@ header .badges .badge > img {
   display: block;
 }
 
+.notice .promotion {
+  position: relative;
+  height: 658px;
+  background-color: #f6f5ef;
+  overflow: hidden;
+}
+
+.notice .promotion .swiper {
+  position: absolute;
+  width: calc((819px * 3) + 20px);
+  height: 553px;
+  /* background-color: orange; */
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40px;
+}
+
+.notice .promotion .swiper .swiper-wrapper {
+
+}
+
+.notice .promotion .swiper .swiper-wrapper .swiper-slide {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.notice .promotion .swiper .swiper-wrapper .swiper-slide-active {
+  opacity: 1;
+}
+
+.notice .promotion .swiper .swiper-wrapper .swiper-slide .btn {
+  position: absolute;
+  width: 100px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+  text-align: center;
+}
+
+.notice .promotion .swiper-pagination {
+  
+}
+
+.notice .promotion .swiper-button-prev,
+.notice .promotion .swiper-button-next {
+  position: absolute;
+  top: 250px;
+  height: 55px;
+  width: 55px;
+  border: 2px solid #333;
+  color: #333;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.notice .promotion .swiper-button-prev::after, 
+.notice .promotion .swiper-button-next::after {
+  font-size: 24px;
+}
+
+.notice .promotion .swiper-button-prev {
+  Left: 50%;
+  transform: translate(-550px, 0);
+}
+
+.notice .promotion .swiper-button-next {
+  Right: 50%;
+  transform: translate(550px, 0);
+}
 
 /* 리워드관련 */
 
@@ -614,12 +695,7 @@ header .badges .badge > img {
   left: 190px;
 }
 
-.elsalvador .inner img.elsalvador__item.on {
-  position: absolute;
-  width: 30%;
-  top: 0;
-  bottom: 0;
-  margin: auto;
+.elsalvador:active .inner img.elsalvador__item {
   left: 190px;
   opacity: 1;
   transform: translateX(0);
@@ -638,12 +714,7 @@ header .badges .badge > img {
   left: 640px;
 }
 
-.elsalvador .inner div.elsalvador__content.on {
-  position: absolute;
-  height: 300px;
-  top: 0;
-  bottom: 0;
-  margin: auto;
+.elsalvador:active .inner div.elsalvador__content {
   left: 640px;
   opacity: 1;
   transform: translateX(0);
@@ -681,19 +752,6 @@ header .badges .badge > img {
   transition: 1.5s;
 }
 
-.ethiopia.on::before {
-  content: "";
-  position: absolute;
-  height: 400px;
-  width: 400px;
-  bottom: 0;
-  background-image: url("../images/ethiopia_before.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  left: -50px;
-  opacity: 1;
-}
-
 .ethiopia::after {
   content: "";
   position: absolute;
@@ -708,20 +766,11 @@ header .badges .badge > img {
   transition: 1.5s;
 }
 
-.ethiopia.on::after {
-  content: "";
-  position: absolute;
-  height: 400px;
-  width: 300px;
-  bottom: 0;
-  right: 0;
-  background-image: url("../images/ethiopia_after.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+.ethiopia:active::after,
+.ethiopia:active::before {
   opacity: 1;
+  transition: 1.5s;
 }
-
-
 
 .ethiopia .inner {
   position: relative;
@@ -738,19 +787,12 @@ header .badges .badge > img {
   margin: auto;
   z-index: 1;
   opacity: 0;
-  transition: 1.5s;
-  transition-delay: 0.8s;
 }
 
-.ethiopia .inner .ethiopia__item.on {
-  position: absolute;
-  height: 400px;
-  left: -480px;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  z-index: 1;
+.ethiopia:active .inner .ethiopia__item {
+  transition: 1.5s;
   opacity: 1;
+  transition-delay: 0.8s;
 }
 
 .ethiopia .inner div.ethiopia__container {
@@ -1173,3 +1215,4 @@ footer .inner .footer__menu .right > img {
 .footer__copylight p {
   line-height: 30px;
 }
+
