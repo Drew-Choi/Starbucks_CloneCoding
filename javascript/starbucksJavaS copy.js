@@ -57,11 +57,88 @@ if (!e.target.classList.contains("material-symbols-outlined")) {
     centeredSlides: true,
     loop: true,
     autoplay: {
-      delay: 5000,
+      delay: 500,
       disableOnInteraction: false,
     },
     pagination: {
       el: ".promotion .swiper-pagination",
       clickable: true
+    },
+    navigation: {
+     prevEl: ".promotion .swiper-button-prev",
+     nextEl: ".promotion .swiper-button-next"
     }
   });
+
+  // 프로모션 스탑 버튼
+  function controlAutoPlay() {
+    console.log(swiperPromotion);
+    if (swiperPromotion.autoplay.running === false) {
+      swiperPromotion.autoplay.start();
+    } else {
+      swiperPromotion.autoplay.stop();
+    }
+  }
+
+  //Toggle 프로모션
+const togglePromotion = document.querySelector(".toggle-promotion");
+const promotionSection = document.querySelector(".promotion");
+
+togglePromotion.addEventListener ("click", function(){
+    if (promotionSection.classList.contains("hide")) {
+      promotionSection.classList.remove("hide");
+      togglePromotion.classList.add("show");
+    } else {
+      promotionSection.classList.add("hide");
+      togglePromotion.classList.remove("show");
+    }
+})
+
+
+//애니메이션 파트
+window.onload = function() {
+  const visualSection = document.querySelector(".visual");
+  visualSection.classList.add("animate");
+}
+
+//스크롤 파트
+//엘살바도르
+window.addEventListener("scroll", function() {
+  console.log(window.scrollY);
+  if (window.scrollY > 80) {
+    const elsalSection = document.querySelector(".elsalvador");
+    elsalSection.classList.add("animate");
+  };
+})
+
+//에티오피아
+window.addEventListener("scroll", function() {
+  if (window.scrollY > 700) {
+    const ethiSection = document.querySelector(".ethiopia");
+    ethiSection.classList.add("animate");
+  };
+})
+
+//페이보라이트
+window.addEventListener("scroll", function() {
+  if (window.scrollY > 1000) {
+    const favoSection = document.querySelector(".favorite");
+    favoSection.classList.add("animate");
+  };
+})
+
+//매거진
+window.addEventListener("scroll", function() {
+  if (window.scrollY > 1900) {
+    const magaSection = document.querySelector(".magazine");
+    magaSection.classList.add("animate");
+  };
+})
+
+//스토어
+window.addEventListener("scroll", function() {
+  if (window.scrollY > 2200) {
+    const magaSection = document.querySelector(".store");
+    magaSection.classList.add("animate");
+  };
+})
